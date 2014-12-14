@@ -4,8 +4,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
-group :development do 
+group :development, :test do 
   gem 'sqlite3', '1.3.5'
+end
+
+#dbw: added this -- http://www.jackiejohnston.us/blog/switching-to-postgresql-production-database-for-heroku-deployment/
+group :production do 
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
